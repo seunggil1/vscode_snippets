@@ -1,0 +1,94 @@
+{
+	"util, io" : {
+		"prefix": "algoPack",
+		"body":[
+			"import java.util.*;",
+			"import java.io.*;"
+		]
+	},
+	"BufferedReader": {
+		"prefix": "reader",
+		"body": [
+			"BufferedReader re = new BufferedReader(new InputStreamReader(System.in));",
+			"",
+			"$0re.close();"
+		]
+	},
+	"new StringTokenizer": {
+		"prefix": "newToken",
+		"body": [
+			"StringTokenizer token = new StringTokenizer(re.readLine());",
+		]
+	},
+	"StringTokenizer": {
+		"prefix": "token",
+		"body": [
+			"token = new StringTokenizer(re.readLine());",
+		]
+	},
+	"parseInt from Reader": {
+		"prefix": "intReader",
+		"body": [
+			"${1:label} Integer.parseInt(re.readLine());",
+		]
+	},
+	"parseInt from Token": {
+		"prefix": "intToken",
+		"body": [
+			"${1:label} Integer.parseInt(token.nextToken());",
+		]
+	},
+	"for-loop i":{
+		"prefix": "iFor",
+		"body": [
+			"for(int ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++){",
+				"$0",
+			"}"
+		]
+	},
+	"for-loop j":{
+		"prefix": "jFor",
+		"body": [
+			"for(int ${1:j} = 0; ${1:j} < ${2:length}; ${1:j}++){",
+				"$0",
+			"}"
+		]
+	},
+	"for-loop k":{
+		"prefix": "kFor",
+		"body": [
+			"for(int ${1:k} = 0; ${1:k} < ${2:length}; ${1:k}++){",
+				"$0",
+			"}"
+		]
+	},
+	"4 direction delta":{
+		"prefix": "delta",
+		"body": "static final int[][] delta = {{0,1}, {1,0}, {-1,0},{0,-1}};"
+	},
+
+	"4 direction deltaX":{
+		"prefix": "dx",
+		"body": "static final int[] dx = {0, 1, -1, 0};"
+	},
+
+	"4 direction deltaY":{
+		"prefix": "dy",
+		"body": "static final int[] dy = {1, 0, 0,-1};"
+	},
+
+	"testCase":{
+		"prefix" : "testCase",
+		"body" : "int testCase = Integer.parseInt(re.readLine());"
+	},
+
+	"for-loop testCase":{
+		"prefix": "tFor",
+		"body": [
+			"for(int ${1:t} = 1; ${1:t} <= testCase; ${1:t}++){",
+				"$0",
+			"}"
+		]
+	}
+
+}
